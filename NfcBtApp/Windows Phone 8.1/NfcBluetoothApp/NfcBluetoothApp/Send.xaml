@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="NfcBluetoothApp.Send"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NfcBluetoothApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+
+    <Grid>
+        <ProgressBar x:Name="progress" HorizontalAlignment="Center" Height="42" Margin="58,327,61,0" VerticalAlignment="Top" Width="281" Visibility="Collapsed">
+            <FlyoutBase.AttachedFlyout>
+                <PickerFlyout/>
+            </FlyoutBase.AttachedFlyout>
+        </ProgressBar>
+        <ProgressRing x:Name="waiting" HorizontalAlignment="Center" Margin="127,265,123,0" VerticalAlignment="Top" IsActive="False" Height="150" Width="150"/>
+        <Button x:Name="fileButton" Content="Wybierz" HorizontalAlignment="Center" Margin="150,178,141,0" VerticalAlignment="Top" Click="selectFile"/>
+        <Button x:Name="sendButton" Content="Wyślij" HorizontalAlignment="Center" Margin="150,253,141,0" VerticalAlignment="Top" Visibility="Collapsed" Click="sendFile"/>
+        <Button Content="Anuluj" HorizontalAlignment="Center" Margin="150,539,141,0" VerticalAlignment="Top" Click="cancel"/>
+        <Image x:Name="tapImage" HorizontalAlignment="Center" Height="370" Margin="27,96,22,0" VerticalAlignment="Top" Width="351" Source="Assets/connect.png" Visibility="Collapsed"/>
+        <TextBlock x:Name="tapText" HorizontalAlignment="Center" Margin="58,471,39,0" TextWrapping="Wrap" Text="Zbliż urządzenia aby rozpocząć przesyłanie" VerticalAlignment="Top" Height="31" Width="303" IsTapEnabled="False" TextAlignment="Center" FontSize="14" Visibility="Collapsed" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+        <TextBlock x:Name="statusText" HorizontalAlignment="Center" Margin="27,60,22,0" TextWrapping="Wrap" VerticalAlignment="Top" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False" Height="102" Width="351" TextAlignment="Center" FontSize="20" FontWeight="Bold"/>
+    </Grid>
+</Page>
